@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/farm"
+    android:layout_height="match_parent"
+    tools:context=".crprecom.crop_recomen">
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="પાક માટેની ભલામણ"
+        android:padding="5dp"
+        android:textColor="#fff"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/crop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Heading"
+        android:gravity="center"
+        android:hint="તમારા ઝોનનું નામ લખો "
+        android:textSize="26sp"
+        android:padding="5dp"
+        android:textColor="#ddffffff"
+        android:textColorHint="#ccffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnGetCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_below="@id/crop"
+        android:textSize="26sp"
+        android:text="પાક શોધો"
+        android:textColor="#fff"
+        android:background="#007700"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/displaycrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGetCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="#77000000"
+        android:textColor="#fff"
+        android:textSize="30dp"
+        android:textAlignment="gravity"
+        />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnGetBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_below="@id/displaycrop"
+        android:textSize="26sp"
+        android:text="કિંમત શોધો"
+        android:textColor="#fff"
+        android:background="#007700"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

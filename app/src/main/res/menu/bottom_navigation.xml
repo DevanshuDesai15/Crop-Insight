@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/CropReco"
+        android:icon="@drawable/ic_cropreco"
+        android:title="પાક માટેની ભલામણ"/>
+    <item
+        android:id="@+id/BudgetTrac"
+        android:icon="@drawable/ic_budget"
+        android:title="બજેટ ટ્રેકર"/>
+    <item
+        android:id="@+id/CropRotat"
+        android:icon="@drawable/ic_rotation"
+        android:title="પાક પરિભ્રમણ"/>
+    <item
+        android:id="@+id/GovtProg"
+        android:icon="@drawable/ic_govt"
+        android:title="સરકારી યોજનાઓ"/>
+</menu>
