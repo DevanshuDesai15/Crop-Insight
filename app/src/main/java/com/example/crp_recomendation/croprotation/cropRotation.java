@@ -82,39 +82,24 @@ public class cropRotation extends Fragment {
 
                                                     int size = doc.size();
 
-//                                                    for(int i=0;i<size;i++){
-//                                                        String Crop_name = doc.get(i).getString("crop_name");
-//                                                        String Crop_type = doc.get(i).getString("Crop_type");
-//                                                        String Crop_term = doc.get(i).getString("Crop_term");
-//                                                        //String soil = doc.get(i).getString("Soil_id");
-//                                                        String Crop_price = doc.get(i).getString("crop_prices");
-//                                                        String Crop_selling_Price = doc.get(i).getString("crop_selling_price");
-//
-//                                                        if(tieCropRotate.getText().toString() != Crop_name){
-//                                                            tvDisplayCropRotate.setText(
-//                                                                    "Crop Name  \t\t\t\t\t" + Crop_name + "\n" +
-//                                                                            "Term  \t\t\t\t\t" + Crop_type + "\n" +
-//                                                                            "Type  \t\t\t\t\t" + Crop_term + "\n" +
-//                                                                            "Buying Price  \t\t\t\t\t" + Crop_price + "\n"
-//                                                            );
-//                                                            break;
-//                                                        }
-//                                                    }
                                                     for(int i=0;i<size;i++){
                                                         String Crop_name = doc.get(i).getId();
 
                                                         if(!(tieCropRotate.getText().toString().equals(Crop_name))){
                                                             String Crop_type = doc.get(i).getString("Crop_type");
                                                             String Crop_term = doc.get(i).getString("Crop_term");
-                                                            //String soil = doc.get(i).getString("Soil_id");
+
                                                             String Crop_price = doc.get(i).getString("crop_prices");
-                                                            String Crop_selling_Price = doc.get(i).getString("crop_selling_price");
+                                                            String srr = doc.get(i).getString("srr");
+                                                            String syr = doc.get(i).getString("syr");
 
                                                             tvDisplayCropRotate.setText(
-                                                                    "Crop Name  \t\t\t\t\t" + Crop_name + "\n" +
-                                                                            "Term  \t\t\t\t\t" + Crop_type + "\n" +
-                                                                            "Type  \t\t\t\t\t" + Crop_term + "\n" +
-                                                                            "Buying Price  \t\t\t\t\t" + Crop_price + "\n"
+                                                                    "Crop Name : " + Crop_name + "\n" +
+                                                                            "Term :  " + Crop_type + "\n" +
+                                                                            "Type :  " + Crop_term + "\n" +
+                                                                            "Buying Price :  " + Crop_price + "\n"+
+                                                                            "Seed Rate Ratio :  " + srr + "\n"+
+                                                                            "Seed Yield Ratio :  " + syr + "\n"
                                                             );
                                                             break;
                                                         }
@@ -128,9 +113,12 @@ public class cropRotation extends Fragment {
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(getActivity(), "field is empty" , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Google Firestore Error" , Toast.LENGTH_SHORT).show();
                             }
                         });
+            }
+            else{
+                Toast.makeText(getActivity(),"કૃપા કરીને પાકનું નામ દાખલ કરો",Toast.LENGTH_SHORT).show();
             }
         }
         catch (Exception e){

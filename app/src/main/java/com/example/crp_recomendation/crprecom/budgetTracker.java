@@ -41,27 +41,49 @@ public class budgetTracker extends Fragment {
         editText5.setText(CostStorage.getSrr());
         editText6.setText(CostStorage.getSyr());
 
+        CostStorage.setBuy(null);
+        CostStorage.setSyr(null);
+        CostStorage.setSrr(null);
+
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 double n1,n2,n3,n4,n5,n6,totBuyPrice,totIncome;
 
-                n1= Double.parseDouble(editText1.getText().toString());
-                n2= Double.parseDouble(editText2.getText().toString());
-                n3= Double.parseDouble(editText3.getText().toString());
-                n4= Double.parseDouble(editText4.getText().toString());
-                n5= Double.parseDouble(editText5.getText().toString());
-                n6= Double.parseDouble(editText6.getText().toString());
+                if(editText1.getText().toString().equals("")){
+                    editText1.setError("કૃપા કરીને આ ભરો");
+                }
+                else if(editText2.getText().toString().equals("")){
+                    editText2.setError("કૃપા કરીને આ ભરો");
+                }
+                else if(editText3.getText().toString().equals("")){
+                    editText3.setError("કૃપા કરીને આ ભરો");
+                }
+                else if(editText4.getText().toString().equals("")){
+                    editText4.setError("કૃપા કરીને આ ભરો");
+                }
+                else if(editText5.getText().toString().equals("")){
+                    editText5.setError("1 હેક્ટરમાં કેટલા કિલો બીજ રોપવાનુ");
+                }
+                else if(editText6.getText().toString().equals("")){
+                    editText6.setError("કૃપા કરી આ ભરો");
+                }
+                else{
+                    n1= Double.parseDouble(editText1.getText().toString());
+                    n2= Double.parseDouble(editText2.getText().toString());
+                    n3= Double.parseDouble(editText3.getText().toString());
+                    n4= Double.parseDouble(editText4.getText().toString());
+                    n5= Double.parseDouble(editText5.getText().toString());
+                    n6= Double.parseDouble(editText6.getText().toString());
 
+                    totBuyPrice = ((n5*n4)*(1.1*n1))+ n2+ n3;
+                    totIncome = (n6*n4)*n1;
 
-                totBuyPrice = ((n5*n4)*(1.1*n1))+ n2+ n3;
-                totIncome = (n6*n4)*n1*100;
-
-                show.setText(String.valueOf("ખરીદી કિંમત/Buying Price: "+totBuyPrice+"\n"+
-                                            "આવક/Total Income"+ totIncome             ));
-
-                calculate.setVisibility(View.INVISIBLE);
+                    show.setText(String.valueOf("ખરીદી કિંમત/Buying Price: "+totBuyPrice+"\n"+
+                                                "આવક/Total Income"+ totIncome            ));
+                    calculate.setVisibility(View.INVISIBLE);
+                }
             }
         });
 

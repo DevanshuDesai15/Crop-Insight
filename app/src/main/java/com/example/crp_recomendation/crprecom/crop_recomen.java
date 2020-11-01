@@ -84,7 +84,7 @@ public class crop_recomen extends Fragment {
 
                 CostStorage.setBuy(Crop_price);
                 CostStorage.setSrr(seedRateRatio);
-                CostStorage.setSyr(seedYieldRatio);
+                CostStorage.setSyr(seedYieldRatio+"00");
 
 
                 transaction.replace(R.id.fragment_container,budget);
