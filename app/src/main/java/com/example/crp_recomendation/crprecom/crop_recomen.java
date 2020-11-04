@@ -137,8 +137,8 @@ public class crop_recomen extends Fragment {
 
                                                 tvDisplayCrop.setText(
                                                         "Crop Name  \t\t\t\t\t" + Crop_name + "\n" +
-                                                                "Term  \t\t\t\t\t" + Crop_type + "\n" +
-                                                                "Type  \t\t\t\t\t" + Crop_term + "\n" +
+                                                                "Term  \t\t\t\t\t" + Crop_term + "\n" +
+                                                                "Type  \t\t\t\t\t" + Crop_type + "\n" +
                                                                 "Buying Price  \t\t\t\t\t" + Crop_price + "\n" +
                                                                 "Seed Rate Ratio  \t\t\t\t\t" + seedRateRatio + "\n" +
                                                                 "Seed Yield Ratio  \t\t\t\t\t" + seedYieldRatio

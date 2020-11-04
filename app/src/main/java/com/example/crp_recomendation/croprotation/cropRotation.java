@@ -95,8 +95,8 @@ public class cropRotation extends Fragment {
 
                                                             tvDisplayCropRotate.setText(
                                                                     "Crop Name : " + Crop_name + "\n" +
-                                                                            "Term :  " + Crop_type + "\n" +
-                                                                            "Type :  " + Crop_term + "\n" +
+                                                                            "Term :  " + Crop_term + "\n" +
+                                                                            "Type :  " + Crop_type + "\n" +
                                                                             "Buying Price :  " + Crop_price + "\n"+
                                                                             "Seed Rate Ratio :  " + srr + "\n"+
                                                                             "Seed Yield Ratio :  " + syr + "\n"
